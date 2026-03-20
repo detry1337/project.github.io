@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конструктор наборов | Клубника в шоколаде</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/constructor.css">
+        <style>
+        .top-nav {
+            position: relative !important;
+            top: auto !important;
+            left: auto !important;
+            width: 100% !important;
+            z-index: auto !important;
+        }
+        body {
+            padding-top: 0 !important;
+        }
+    </style>
+</head>
+<body>
+<div class="top-nav">
+    <div class="nav-container">
+        <div class="nav-wrapper">
+            <div class="nav-left">
+                <a href="../index.html" class="logo">
+                    <img src="../img/logo.png" alt="Логотип">
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="../index.html#catalog">Товары</a></li>
+                    <li><a href="constructor.html">Конструктор</a></li>
+                    <li><a href="../index.html#order-info">Как сделать заказ?</a></li>
+                    <li><a href="../index.html#reviews">Отзывы</a></li>
+                    <li><a href="../index.html#contacts">Контакты</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-right">
+                <a href="cart.html" class="cart-link">
+                    Корзина <span class="cart-badge" id="cartCount">0</span>
+                </a>
+                <button class="burger-menu" id="burgerBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="constructor-page">
+        <div class="constructor-container">
+            <h1 class="constructor-title">Конструктор наборов</h1>
+            
+            <div class="constructor-content">
+                <div class="constructor-left">
+                    <div class="constructor-section">
+                        <h2>Выберите количество ягод</h2>
+                        <div class="quantity-circles">
+                            <div class="quantity-circle" data-quantity="4">4</div>
+                            <div class="quantity-circle" data-quantity="10">10</div>
+                            <div class="quantity-circle" data-quantity="12">12</div>
+                            <div class="quantity-circle" data-quantity="16">16</div>
+                            <div class="quantity-circle" data-quantity="20">20</div>
+                            <div class="quantity-circle" data-quantity="25">25</div>
+                        </div>
+                    </div>
+                    
+                    <div class="constructor-section" id="chocolateSection" style="display: none;">
+                        <h2>Какой шоколад использовать?</h2>
+                        <p class="remaining-info" id="remainingInfo">Осталось распределить: <span id="remainingCount">0</span> ягод</p>
+                        
+                        <div class="chocolate-grid">
+                            <div class="chocolate-item" data-type="горький">
+                                <div class="chocolate-image">
+                                    <img src="../img/chok/dark.png" alt="Горький шоколад">
+                                </div>
+                                <span class="chocolate-name">Клубника в горьком шоколаде</span>
+                                <div class="chocolate-counter" style="display: none;">
+                                    <button class="counter-btn minus">−</button>
+                                    <input type="number" class="counter-input" value="0" min="0" readonly>
+                                    <button class="counter-btn plus">+</button>
+                                </div>
+                            </div>
+                            
+                            <div class="chocolate-item" data-type="розовый">
+                                <div class="chocolate-image">
+                                    <img src="../img/chok/pink.png" alt="Розовый шоколад">
+                                </div>
+                                <span class="chocolate-name">Клубника в розовом шоколаде</span>
+                                <div class="chocolate-counter" style="display: none;">
+                                    <button class="counter-btn minus">−</button>
+                                    <input type="number" class="counter-input" value="0" min="0" readonly>
+                                    <button class="counter-btn plus">+</button>
+                                </div>
+                            </div>
+                            
+                            <div class="chocolate-item" data-type="молочный">
+                                <div class="chocolate-image">
+                                    <img src="../img/chok/milk.png" alt="Молочный шоколад">
+                                </div>
+                                <span class="chocolate-name">Клубника в молочном шоколаде</span>
+                                <div class="chocolate-counter" style="display: none;">
+                                    <button class="counter-btn minus">−</button>
+                                    <input type="number" class="counter-input" value="0" min="0" readonly>
+                                    <button class="counter-btn plus">+</button>
+                                </div>
+                            </div>
+                            
+                            <div class="chocolate-item" data-type="голубой">
+                                <div class="chocolate-image">
+                                    <img src="../img/chok/blue.png" alt="Голубой шоколад">
+                                </div>
+                                <span class="chocolate-name">Клубника в голубом шоколаде</span>
+                                <div class="chocolate-counter" style="display: none;">
+                                    <button class="counter-btn minus">−</button>
+                                    <input type="number" class="counter-input" value="0" min="0" readonly>
+                                    <button class="counter-btn plus">+</button>
+                                </div>
+                            </div>
+                            
+                            <div class="chocolate-item" data-type="жёлтый">
+                                <div class="chocolate-image">
+                                    <img src="../img/chok/yellow.png" alt="Жёлтый шоколад">
+                                </div>
+                                <span class="chocolate-name">Клубника в жёлтом шоколаде</span>
+                                <div class="chocolate-counter" style="display: none;">
+                                    <button class="counter-btn minus">−</button>
+                                    <input type="number" class="counter-input" value="0" min="0" readonly>
+                                    <button class="counter-btn plus">+</button>
+                                </div>
+                            </div>
+                            
+                            <div class="chocolate-item" data-type="зелёный">
+                                <div class="chocolate-image">
+                                    <img src="../img/chok/green.png" alt="Зелёный шоколад">
+                                </div>
+                                <span class="chocolate-name">Клубника в зелёном шоколаде</span>
+                                <div class="chocolate-counter" style="display: none;">
+                                    <button class="counter-btn minus">−</button>
+                                    <input type="number" class="counter-input" value="0" min="0" readonly>
+                                    <button class="counter-btn plus">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="constructor-right">
+                    <div class="constructor-section" id="toppingsSection" style="display: none;">
+                        <h2>Какую посыпку использовать?</h2>
+                        <p class="toppings-subtitle">Выберите посыпку, которую хотите нанести на клубнику.</p>
+                        
+                        <div class="toppings-grid">
+                            <label class="topping-item">
+                                <input type="checkbox" class="topping-checkbox">
+                                <img src="../img/sprinkles/goldg.webp" alt="Золотое золото">
+                                <span>Золотое золото съедобное</span>
+                            </label>
+                            <label class="topping-item">
+                                <input type="checkbox" class="topping-checkbox">
+                                <img src="../img/sprinkles/goldsh.jpg" alt="Золотой шиммер">
+                                <span>Пищевой золотой шиммер</span>
+                            </label>
+                            <label class="topping-item">
+                                <input type="checkbox" class="topping-checkbox">
+                                <img src="../img/sprinkles/silversh.jpg" alt="Серебряный шиммер">
+                                <span>Пищевой серебряный шиммер</span>
+                            </label>
+                            <label class="topping-item">
+                                <input type="checkbox" class="topping-checkbox">
+                                <img src="../img/sprinkles/coconut.jpg" alt="Кокосовая стружка">
+                                <span>Кокосовая стружка</span>
+                            </label>
+                            <label class="topping-item">
+                                <input type="checkbox" class="topping-checkbox">
+                                <img src="../img/sprinkles/wafer.jpg" alt="Вафельная стружка">
+                                <span>Вафельная стружка</span>
+                            </label>
+                            <label class="topping-item">
+                                <input type="checkbox" class="topping-checkbox">
+                                <img src="../img/sprinkles/peanut.jpg" alt="Арахис">
+                                <span>Арахис</span>
+                            </label>
+                            <label class="topping-item">
+                                <input type="checkbox" class="topping-checkbox">
+                                <img src="../img/sprinkles/raspberry.webp" alt="Малина">
+                                <span>Малина</span>
+                            </label>
+                            <label class="topping-item">
+                                <input type="checkbox" class="topping-checkbox">
+                                <img src="../img/sprinkles/goldp.webp" alt="Розовое золото">
+                                <span>Розовое золото съедобное</span>
+                            </label>
+                            <label class="topping-item">
+                                <input type="checkbox" class="topping-checkbox">
+                                <img src="../img/sprinkles/cond.png" alt="Кондитерская посыпка">
+                                <span>Кондитерская посыпка</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="constructor-total" id="constructorTotal" style="display: none;">
+                        <div class="total-row">
+                            <span>Стоимость набора:</span>
+                            <span id="basePrice">0 руб.</span>
+                        </div>
+                        <div class="total-row grand-total">
+                            <span>Итого:</span>
+                            <span id="finalPrice">0 руб.</span>
+                        </div>
+                        
+                        <button class="add-to-cart-btn" id="addToCartBtn">Добавить в корзину</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/constructor.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

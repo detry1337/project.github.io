@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Клубника в шоколаде | Главная</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="preloader">
+        <div class="preloader-content">
+            <img src="img/logo.png" alt="ShoKlu" class="preloader-logo">
+        </div>
+    </div>
+
+<div class="top-nav">
+    <div class="nav-container">
+        <div class="nav-wrapper">
+            <div class="nav-left">
+                <a href="index.html" class="logo">
+                    <img src="img/logo.png" alt="Логотип">
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="#catalog">Товары</a></li>
+                    <li><a href="src/constructor.html">Конструктор</a></li>
+                    <li><a href="#order-info">Как сделать заказ?</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-right">
+                <a href="src/cart.html" class="cart-link">
+                    Корзина <span class="cart-badge" id="cartCount">0</span>
+                </a>
+                <button class="burger-menu" id="burgerBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Продажа клубники в шоколаде</h1>
+                <p>Мы предлагаем свежую клубнику в шоколаде ручной работы. В работе используем только отборную крупную клубнику и качественный шоколад. В ассортименте представлены наборы разного объёма — от 4 до 25 ягод.</p>
+                <a href="#catalog" class="hero-btn">К товарам</a>
+            </div>
+            <div class="hero-image">
+                <img src="img/nubor/n12.jpg" alt="Клубника в шоколаде">
+            </div>
+        </div>
+    </div>
+
+    <div class="features-section">
+        <h2>Преимущества клубники в шоколаде</h2>
+        <p class="features-subtitle">Наши сладости отличаются использованием свежих ягод и качественного шоколада. Мы предлагаем доступные цены и счастливые эмоции.</p>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-header">
+                    <span class="feature-icon">🍓</span>
+                    <h3>Свежие ягоды</h3>
+                </div>
+                <p>Для приготовления мы используем отборную крупную клубнику.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-header">
+                    <span class="feature-icon">🍫</span>
+                    <h3>Качественный шоколад</h3>
+                </div>
+                <p>Мы используем только качественный шоколад для создания неповторимого вкуса.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-header">
+                    <span class="feature-icon">🚚</span>
+                    <h3>Быстрая доставка</h3>
+                </div>
+                <p>Мы доставляем заказы по Владимиру всего за 200 ₽.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-header">
+                    <span class="feature-icon">📦</span>
+                    <h3>Возможность самовывоза</h3>
+                </div>
+                <p>Вы можете забрать заказ самостоятельно, чтобы сэкономить время.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="products-section" id="catalog">
+    <div class="products-container">
+        <h2>Наши наборы</h2>
+        
+        <div class="products-grid">
+            <a href="src/product.html?id=kapriz" class="product-card-link-full">
+                <div class="product-card">
+                    <div class="product-image-slider" id="slider-kapriz">
+                        <div class="slider-images">
+                            <img src="img/nubor/n11.jpg" alt="Набор Каприз 1" class="active">
+                            <img src="img/nubor/n12.jpg" alt="Набор Каприз 2">
+                            <img src="img/nubor/n13.jpg" alt="Набор Каприз 3">
+                        </div>
+                        <div class="slider-dots">
+                            <span class="dot active" onclick="event.preventDefault(); changeProductSlide(0, 'kapriz')"></span>
+                            <span class="dot" onclick="event.preventDefault(); changeProductSlide(1, 'kapriz')"></span>
+                            <span class="dot" onclick="event.preventDefault(); changeProductSlide(2, 'kapriz')"></span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Набор «Каприз»</h3>
+                        <div class="product-desc">Идеальный мини-комплимент для сладкого настроения. Нежная свежая клубника в изысканном шоколаде — маленький, но очень приятный знак внимания.</div>
+                        <div class="product-price">
+                            1 600 ₽
+                            <span class="product-quantity">10 ягод</span>
+                        </div>
+                        <div class="product-buttons">
+                            <span class="product-link">Подробнее</span>
+                            <button class="buy-btn" onclick="event.preventDefault(); addToCart('kapriz', 'Набор «Каприз»', 1600, 10)">Купить</button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="src/product.html?id=kakaobum" class="product-card-link-full">
+                <div class="product-card">
+                    <div class="product-image-slider" id="slider-kakaobum">
+                        <div class="slider-images">
+                            <img src="img/nubor/n21.jpg" alt="Набор Какао-бум 1" class="active">
+                            <img src="img/nubor/n22.jpg" alt="Набор Какао-бум 2">
+                            <img src="img/nubor/n23.jpg" alt="Набор Какао-бум 3">
+                        </div>
+                        <div class="slider-dots">
+                            <span class="dot active" onclick="event.preventDefault(); changeProductSlide(0, 'kakaobum')"></span>
+                            <span class="dot" onclick="event.preventDefault(); changeProductSlide(1, 'kakaobum')"></span>
+                            <span class="dot" onclick="event.preventDefault(); changeProductSlide(2, 'kakaobum')"></span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Набор «Какао-бум»</h3>
+                        <div class="product-desc">Идеальный подарок для настоящих сладкоежек. Сочная клубника в контрастном шоколадном обрамлении с хрустящими нотками — маленькое приключение для вкуса.</div>
+                        <div class="product-price">
+                            1 600 ₽
+                            <span class="product-quantity">10 ягод</span>
+                        </div>
+                        <div class="product-buttons">
+                            <span class="product-link">Подробнее</span>
+                            <button class="buy-btn" onclick="event.preventDefault(); addToCart('kakaobum', 'Набор «Какао-бум»', 1600, 10)">Купить</button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="src/product.html?id=roskosh" class="product-card-link-full">
+                <div class="product-card">
+                    <div class="product-image-slider" id="slider-roskosh">
+                        <div class="slider-images">
+                            <img src="img/nubor/n31.jpg" alt="Набор Роскошь 1" class="active">
+                            <img src="img/nubor/n32.jpg" alt="Набор Роскошь 2">
+                            <img src="img/nubor/n33.jpg" alt="Набор Роскошь 3">
+                        </div>
+                        <div class="slider-dots">
+                            <span class="dot active" onclick="event.preventDefault(); changeProductSlide(0, 'roskosh')"></span>
+                            <span class="dot" onclick="event.preventDefault(); changeProductSlide(1, 'roskosh')"></span>
+                            <span class="dot" onclick="event.preventDefault(); changeProductSlide(2, 'roskosh')"></span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Набор «Роскошь»</h3>
+                        <div class="product-desc">Идеальный набор для тех, кто ценит благородство вкуса. Отборные ягоды в драгоценном обрамлении бельгийского шоколада — маленькая роскошь для больших моментов.</div>
+                        <div class="product-price">
+                            1 600 ₽
+                            <span class="product-quantity">9 ягод</span>
+                        </div>
+                        <div class="product-buttons">
+                            <span class="product-link">Подробнее</span>
+                            <button class="buy-btn" onclick="event.preventDefault(); addToCart('roskosh', 'Набор «Роскошь»', 1600, 9)">Купить</button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="src/product.html?id=nezhnost" class="product-card-link-full">
+                <div class="product-card">
+                    <div class="product-image-slider" id="slider-nezhnost">
+                        <div class="slider-images">
+                            <img src="img/nubor/n51.jpg" alt="Набор Нежность 1" class="active">
+                            <img src="img/nubor/n52.png" alt="Набор Нежность 2">
+                        </div>
+                        <div class="slider-dots">
+                            <span class="dot active" onclick="event.preventDefault(); changeProductSlide(0, 'nezhnost')"></span>
+                            <span class="dot" onclick="event.preventDefault(); changeProductSlide(1, 'nezhnost')"></span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Набор «Нежная симфония»</h3>
+                        <div class="product-desc">Изысканное сочетание спелых ягод и нежного бельгийского шоколада. Маленькое удовольствие, созданное для особенных мгновений.</div>
+                        <div class="product-price">
+                            2 500 ₽
+                            <span class="product-quantity">16 ягод</span>
+                        </div>
+                        <div class="product-buttons">
+                            <span class="product-link">Подробнее</span>
+                            <button class="buy-btn" onclick="event.preventDefault(); addToCart('nezhnost', 'Набор «Нежность»', 2500, 16)">Купить</button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="src/product.html?id=triumf" class="product-card-link-full">
+                <div class="product-card">
+                    <div class="product-image-slider" id="slider-triumf">
+                        <div class="slider-images">
+                            <img src="img/nubor/n41.jpg" alt="Набор Триумф 1" class="active">
+                            <img src="img/nubor/n42.jpg" alt="Набор Триумф 2">
+                        </div>
+                        <div class="slider-dots">
+                            <span class="dot active" onclick="event.preventDefault(); changeProductSlide(0, 'triumf')"></span>
+                            <span class="dot" onclick="event.preventDefault(); changeProductSlide(1, 'triumf')"></span>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Набор «Триумф»</h3>
+                        <div class="product-desc">Идеальный набор для уверенного жеста и яркого вкуса. Сочная клубника в идеальном балансе с благородным шоколадом — достойный выбор для любого повода.</div>
+                        <div class="product-price">
+                            1 900 ₽
+                            <span class="product-quantity">12 ягод</span>
+                        </div>
+                        <div class="product-buttons">
+                            <span class="product-link">Подробнее</span>
+                            <button class="buy-btn" onclick="event.preventDefault(); addToCart('triumf', 'Набор «Триумф»', 1900, 12)">Купить</button>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="src/constructor.html" class="product-card-link-full">
+                <div class="product-card custom-set-card">
+                    <div class="product-image custom-set-image">
+                        <div class="plus-circle">+</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Составить свой набор</h3>
+                        <div class="product-desc">Соберите уникальный набор из ваших любимых вкусов. Выберите количество ягод и вид шоколада самостоятельно.</div>
+                        <div class="product-price">от 700 р.</div>
+                        <span class="product-link">Конструктор →</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+    <div class="order-info-section" id="order-info">
+        <div class="order-info-container">
+            <h2>Как сделать заказ</h2>
+            <p class="order-info-subtitle">Выберите набор клубники в шоколаде, оформите заказ и выберите удобный способ получения — доставка по Владимиру (200 ₽) или самовывоз</p>
+            
+            <div class="order-steps">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Выбор набора</h3>
+                        <p>Выберите нужный объём набора — от 4 до 25 ягод</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Оформление заказа</h3>
+                        <p>Оформите заказ на сайте, далее с вами свяжутся</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Способы получения</h3>
+                        <p>Доставка по Владимиру (200 ₽) или самовывоз</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="reviews-section" id="reviews">
+        <div class="reviews-container">
+            <h2>Клиенты любят нас</h2>
+            
+            <div class="reviews-slider">
+                <div class="review-slide active">
+                    <div class="review-bg-image" style="background-image: url('img/rew.jpg');">
+                        <div class="review-content">
+                            <div class="reviewer-photo">
+                                <img src="img/req/r1.jpg" alt="Никита">
+                            </div>
+                            <div class="review-text">
+                                <p>Впервые пробовал клубнику в шоколаде — это просто отпад!</p>
+                                <div class="reviewer-name">Никита</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-slide">
+                    <div class="review-bg-image" style="background-image: url('img/rew.jpg');">
+                        <div class="review-content">
+                            <div class="reviewer-photo">
+                                <img src="img/req/man.jpg" alt="Максим">
+                            </div>
+                            <div class="review-text">
+                                <p>Только что попробовал набор клубники в шоколаде — и это настоящая находка! Клубника крупная, сочная, спелая, а шоколад — именно тот, который тает во рту, не приторный, с приятной ноткой какао.</p>
+                                <div class="reviewer-name">Максим</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-slide">
+                    <div class="review-bg-image" style="background-image: url('img/rew.jpg');">
+                        <div class="review-content">
+                            <div class="reviewer-photo">
+                                <img src="img/req/woman.jpg" alt="Александра">
+                            </div>
+                            <div class="review-text">
+                                <p>Клубника просто отпад.</p>
+                                <div class="reviewer-name">Александра</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="slider-arrow prev" onclick="changeSlide(-1)">←</button>
+                <button class="slider-arrow next" onclick="changeSlide(1)">→</button>
+                
+                <div class="slider-dots">
+                    <span class="dot active" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+            
+            <div class="reviews-footer">
+                <button class="add-review-btn" onclick="openReviewModal()">Оставить отзыв</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="contacts-section" id="contacts">
+        <div class="contacts-container">
+            <h2>Контакты</h2>
+            <p class="contacts-subtitle">Вы можете связаться с нами по телефону для обсуждения заказа или уточнения деталей</p>
+            
+            <div class="contacts-content">
+                <div class="contacts-info">
+                    <div class="contact-phone">
+                        <a href="tel:+79107722999" class="phone-link">
+                            <div class="phone-number">+7 (910) 772-29-99</div>
+                        </a>
+                        <a href="https://t.me/tinka_69" class="telegram-link" target="_blank" rel="noopener noreferrer">Telegram</a>
+                    </div>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Комментарии" rows="4"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-contact-btn">Отправить</button>
+                        
+                        <p class="privacy-text">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности</p>
+                    </form>
+                </div>
+                
+                <div class="contacts-map">
+                    <iframe 
+                        src="https://yandex.ru/map-widget/v1/?ll=40.410020%2C56.135868&mode=search&oid=1038985443&ol=biz&sll=40.410020%2C56.135868&text=%D1%83%D0%BB.%20%D0%A4%D0%B5%D0%B9%D0%B3%D0%B8%D0%BD%D0%B0%2C%2017&z=17" 
+                        frameborder="0" 
+                        allowfullscreen="true">
+                    </iframe>
+                    <p class="map-address">📍 ул. Фейгина, 17 (самовывоз)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-minimal">
+        <div class="footer-container">
+            <p class="copyright">© 2026 ShoKlu. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <div class="review-modal" id="reviewModal">
+        <div class="review-modal-content">
+            <span class="close-modal" onclick="closeReviewModal()">&times;</span>
+            <h3>Оставить отзыв</h3>
+            
+            <form id="reviewForm">
+                <div class="form-group">
+                    <label>Ваше имя</label>
+                    <input type="text" class="form-control" id="reviewName" placeholder="Иван Иванов" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Ваш отзыв</label>
+                    <textarea class="form-control" id="reviewText" placeholder="Напишите, что вам понравилось..." rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-review-btn">Отправить отзыв</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
