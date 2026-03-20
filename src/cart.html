@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина | Клубника в шоколаде</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <style>
+        .top-nav {
+            position: relative !important;
+            top: auto !important;
+            left: auto !important;
+            width: 100% !important;
+            z-index: auto !important;
+        }
+        body {
+            padding-top: 0 !important;
+        }
+        .form-row {
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="preloader">
+        <div class="preloader-content">
+            <img src="../img/logo.png" alt="ShoKlu" class="preloader-logo">
+        </div>
+    </div>
+
+    <div class="top-nav">
+        <div class="nav-container">
+            <div class="nav-wrapper">
+                <div class="nav-left">
+                    <a href="../index.html" class="logo">
+                        <img src="../img/logo.png" alt="Логотип">
+                    </a>
+                </div>
+                
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-links">
+                        <li><a href="../index.html#catalog">Товары</a></li>
+                        <li><a href="constructor.html">Конструктор</a></li>
+                        <li><a href="../index.html#order-info">Как сделать заказ?</a></li>
+                        <li><a href="../index.html#reviews">Отзывы</a></li>
+                        <li><a href="../index.html#contacts">Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <div class="nav-right">
+                    <a href="cart.html" class="cart-link">
+                        Корзина <span class="cart-badge" id="cartCount">0</span>
+                    </a>
+                    <button class="burger-menu" id="burgerBtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cart-page">
+        <div class="cart-container">
+            <div class="cart-header">
+                <h1 class="cart-title">Корзина</h1>
+            </div>
+            
+            <div class="cart-content">
+                <div class="cart-items-section">
+                    <h2>Ваши наборы</h2>
+                    <div id="cartItemsList" class="cart-items-list"></div>
+                    
+                    <div class="cart-options">
+                        <h3>Дополнительные опции</h3>
+                        <div class="options-grid">
+                            <label class="option-checkbox">
+                                <input type="checkbox" id="blueberryDeco" class="option-input" data-price="150">
+                                <span class="option-text">Добавить голубику в оформление (150 руб.)</span>
+                            </label>
+                            <label class="option-checkbox">
+                                <input type="checkbox" id="blueberryChoco" class="option-input" data-price="200">
+                                <span class="option-text">Добавить голубику в шоколаде (200 руб.)</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cart-checkout">
+                    <h2>Оформление заказа</h2>
+                    
+                    <form id="orderForm">
+                        <div class="form-group">
+                            <label>ФИО</label>
+                            <input type="text" class="form-control" id="fullName" placeholder="Иванов Иван Иванович" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Телефон</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="+7 (000) 000-00-00" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Дата</label>
+                            <input type="date" class="form-control" id="deliveryDate" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Тип доставки</label>
+                            <div class="delivery-options">
+                                <label class="delivery-radio">
+                                    <input type="radio" name="delivery" value="pickup" checked>
+                                    <span>Самовывоз (ул. Фейгина, 17)</span>
+                                </label>
+                                <label class="delivery-radio">
+                                    <input type="radio" name="delivery" value="delivery">
+                                    <span>Доставка (по Владимиру 200 руб.)</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div id="addressBlock" style="display: none;">
+                            <div class="form-group">
+                                <label>Адрес доставки</label>
+                                <input type="text" class="form-control" id="deliveryAddress" placeholder="ул. Фейгина, 17">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Подъезд</label>
+                                <input type="text" class="form-control" id="entrance" placeholder="Например, 2">
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group" style="flex: 1;">
+                                    <label>Этаж</label>
+                                    <input type="text" class="form-control" id="floor" placeholder="Например, 5">
+                                </div>
+                                <div class="form-group" style="flex: 1;">
+                                    <label>Квартира</label>
+                                    <input type="text" class="form-control" id="apartment" placeholder="Например, 42">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Комментарий курьеру</label>
+                                <textarea class="form-control" id="courierComment" placeholder="Дополнительные указания..." rows="2"></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="cart-total-block">
+                            <div class="total-row">
+                                <span>Товары:</span>
+                                <span id="subtotalAmount">0 руб.</span>
+                            </div>
+                            <div class="total-row" id="deliveryRow">
+                                <span>Доставка:</span>
+                                <span>200 руб.</span>
+                            </div>
+                            <div class="total-row options-total" id="optionsRow">
+                                <span>Доп. опции:</span>
+                                <span id="optionsAmount">0 руб.</span>
+                            </div>
+                            <div class="total-row grand-total">
+                                <span>Итого:</span>
+                                <span id="totalAmount">0 руб.</span>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="submit-order-btn">Оформить заказ</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="custom-alert" id="customAlert">
+        <div class="alert-content">
+            <div class="alert-message" id="alertMessage"></div>
+            <button class="alert-close" onclick="closeAlert()">OK</button>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/cart.js"></script>
+</body>
+</html>
